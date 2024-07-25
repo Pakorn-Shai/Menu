@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to PDF by Day</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Create an array of OneDrive PDF file links for each day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+            const pdfFiles = [
+            "https://cutt.ly/6ekSRKGZ", // Sunday
+            "https://cutt.ly/KekSR8q4", // Monday
+            "https://cutt.ly/7ekSTu0R", // Tuesday
+            "https://cutt.ly/TekSTnbi", // Wednesday
+            "https://cutt.ly/9ekSTA0n", // Thursday
+            "https://cutt.ly/bekST2sC", // Friday
+            "https://cutt.ly/aekSYiNA" // Saturday
+        ];
+
+        // Get the current day of the week (0-6)
+            // Get the current day of the week (0-6)
+            const today = new Date().getDay();
+
+            // Get the corresponding PDF file for today
+            const pdfFile = pdfFiles[today];
+
+            // Redirect to the PDF file
+            window.location.href = pdfFile;
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
